@@ -1,0 +1,38 @@
+Arma 3 EPOCH server files Patch
+================================
+
+EPOCH fans UNITE
+
+The main reason for this repository to exist is because creators of this mod - EPOCHmod.com not releasing server side code.
+
+TODO:
+  - Fix issues
+ 
+
+EPOCH Version
+----
+
+0.1.0.3
+
+Patch version
+----
+
+0.0
+
+Lystic code
+----
+
+> please give me and han credits by adding LystGender somewhere in the name (plz)
+
+
+Tech
+-----------
+
+This patch uses EPOCH project to work properly:
+
+* [@EPOCH] - EPOCH client files by EPOCHmod.com
+* [@EpochServer] - EPOCH server files by EPOCHmod.com
+
+
+
+Original post was by LystGender @http://www.mpgh.net/forum/showthread.php?t=867963
