@@ -46,7 +46,28 @@ if(_type == "S") then {
 		_response = _dataArray select _index;
 	};
 };
-
+if(_type == "G") then {
+	_key = _this select 1;
+	
+	_keyArray = profilenamespace getVariable ["GROUPS",[]];
+	//_keyArray = [_databasename, "HIVE_GROUP", "GROUPS", "ARRAY"] call iniDB_read;
+	_index = _keyArray find _key;
+	if(_index != -1) then {
+		_dataArray = profilenamespace getVariable ["GROUPS_DATA",[]];
+		//_dataArray = [_databasename, "HIVE_GROUP", "GROUPS_DATA", "ARRAY"] call iniDB_read;
+		_response = _dataArray select _index;
+	};
+};
+if(_type == "B") then {
+	_key = _this select 1;
+	
+	_keyArray = profilenamespace getVariable ["BUILDINGS",[]];
+	_index = _keyArray find _key;
+	if(_index != -1) then {
+		_dataArray = profilenamespace getVariable ["BUILDINGS_DATA",[]];
+		_response = _dataArray select _index;
+	};
+};
 
 
 _response;

@@ -76,6 +76,46 @@ if(_type == "S") then {
 	profilenamespace setVariable ["STORAGE_DATA",_dataArray];
 	saveprofilenamespace;
 };
+if(_type == "G") then {
+	_key = _this select 1;
+	_data = str(_this select 2);
+
+	if(_data == "false") then {_data = "";};
+
+	//add / update data
+	_keyArray = profilenamespace getVariable ["GROUPS",[]];
+	_dataArray = profilenamespace getVariable ["GROUPS_DATA",[]];
+	//_keyArray = [_databasename, "HIVE_GROUP", "GROUPS", "ARRAY"] call iniDB_read;
+	//_dataArray = [_databasename, "HIVE_GROUP", "GROUPS_DATA", "ARRAY"] call iniDB_read;
+	if !(_key in _keyArray) then {_keyArray = _keyArray + [_key];};
+	_index = _keyArray find _key;
+	_dataArray set[_index,_data];
+
+	//save data
+	profilenamespace setVariable ["GROUPS",_keyArray];
+	profilenamespace setVariable ["GROUPS_DATA",_dataArray];
+	saveprofilenamespace;
+	//_ret = [_databasename, "HIVE_GROUP", "GROUPS", _keyArray] call iniDB_write;
+	//_ret = [_databasename, "HIVE_GROUP", "GROUPS_DATA", _dataArray] call iniDB_write;
+};
+if(_type == "B") then {
+	_key = _this select 1;
+	_data = str(_this select 2);
+
+	if(_data == "false") then {_data = "";};
+
+	//add / update data
+	_keyArray = profilenamespace getVariable ["BUILDINGS",[]];
+	_dataArray = profilenamespace getVariable ["BUILDINGS_DATA",[]];
+	if !(_key in _keyArray) then {_keyArray = _keyArray + [_key];};
+	_index = _keyArray find _key;
+	_dataArray set[_index,_data];
+
+	//save data
+	profilenamespace setVariable ["BUILDINGS",_keyArray];
+	profilenamespace setVariable ["BUILDINGS_DATA",_dataArray];
+	saveprofilenamespace;
+};
 
 
 "";
