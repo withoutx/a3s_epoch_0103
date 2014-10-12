@@ -41,7 +41,8 @@ if(_type == "V") then {
 
 if(_type == "SI") then {
 	_key = _this select 1;
-	_data = str(_this select 2);
+//	_data = str(_this select 2); 
+	_data = _this select 2; //FIXING ARRAY OVERQUOTING
 
 	if(_data == "false") then {_data = "";};
 
