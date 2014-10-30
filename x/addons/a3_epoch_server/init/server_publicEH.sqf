@@ -38,4 +38,4 @@
 "EPOCH_packStorage_PVS"		addPublicVariableEventHandler {(_this select 1) call EPOCH_server_packStorage};
 
 "EPOCH_TEMPOBJ_PVS"			addPublicVariableEventHandler {(_this select 1) call EPOCH_localCleanup};
-"EPOCH_oneWayTeleport"		addPublicVariableEventHandler {(_this select 1) call EPOCH_server_teleportPlayer};
+"EPOCH_oneWayTP"		addPublicVariableEventHandler {(_this select 1) call EPOCH_server_teleportPlayer};
